@@ -1,11 +1,7 @@
 # Plan (local only)
 PLAN.md
 
-# Resume PDF (deploy separately, don't track in git)
-app/static/assets/resume.pdf
-
 # Photos (drop into app/static/assets/photos/ locally)
-app/static/assets/photos/*
 !app/static/assets/photos/.gitkeep
 
 # Python
