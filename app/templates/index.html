@@ -2,11 +2,11 @@
 
 {% block content %}
 {% include "partials/hero.html" %}
-{% if photos %}
-{% include "partials/photos.html" %}
-{% endif %}
 {% include "partials/work.html" %}
 {% include "partials/projects.html" %}
 {% include "partials/life.html" %}
 {% include "partials/links.html" %}
+{% if photos %}
+{% include "partials/photos.html" %}
+{% endif %}
 {% endblock %}
