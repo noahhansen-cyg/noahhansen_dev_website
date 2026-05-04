@@ -1,0 +1,33 @@
+- category: "Drums & Music"
+  blurb: >
+    I've been playing drums for X years. Music is where I decompress — there's
+    something about locking into a groove with other people that nothing else replicates.
+    Influences range from classic rock to jazz to whatever sounds interesting.
+  highlights:
+    - "Played with X band for Y years."
+    - "Favorite drummers: John Bonham, Elvin Jones, Dave Grohl."
+
+- category: "Running"
+  blurb: >
+    I run to think. There's no better way to process a hard problem than a long run
+    with no headphones. Currently training for a half marathon.
+  highlights:
+    - "Completed X race in Y time."
+    - "Favorite routes: anywhere with elevation."
+
+- category: "Hiking & Mountain Biking"
+  blurb: >
+    If I'm not behind a keyboard or behind a kit, I'm probably on a trail somewhere.
+    Mountain biking scratches the same itch as a fast feedback loop in code —
+    immediate consequences for bad decisions.
+  highlights:
+    - "Favorite trail: TBD."
+    - "Currently exploring trails in X area."
+
+- category: "Climbing"
+  blurb: >
+    Climbing is a puzzle where falling is the error message. I got into it because
+    it demands full presence — you can't think about your pull request mid-crux.
+  highlights:
+    - "Current grade: TBD."
+    - "Prefer sport climbing but dabble in bouldering."

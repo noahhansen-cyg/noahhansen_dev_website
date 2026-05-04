@@ -1,0 +1,29 @@
+title: "Software Engineer"
+summary: >
+  I build reliable, scalable backend systems and love working across the full stack.
+  I care about clean interfaces, good tests, and software that actually ships.
+
+skills:
+  - category: "Languages"
+    technologies: ["Python", "Go", "TypeScript", "SQL"]
+  - category: "Frameworks & Libraries"
+    technologies: ["Flask", "FastAPI", "React", "SQLAlchemy"]
+  - category: "Infrastructure"
+    technologies: ["AWS", "Docker", "Kubernetes", "Terraform"]
+  - category: "Tooling"
+    technologies: ["Git", "GitHub Actions", "Postgres", "Redis"]
+
+experience:
+  - company: "Company Name"
+    role: "Software Engineer"
+    dates: "2023 – Present"
+    bullets:
+      - "Built and maintained X service that handles Y requests per day."
+      - "Led migration from monolith to microservices, reducing deploy time by Z%."
+      - "Improved test coverage from 40% to 85% across core payment flows."
+  - company: "Previous Company"
+    role: "Junior Software Engineer"
+    dates: "2021 – 2023"
+    bullets:
+      - "Developed internal tooling that saved the team N hours per week."
+      - "Contributed to open-source library used by 500+ projects on GitHub."
