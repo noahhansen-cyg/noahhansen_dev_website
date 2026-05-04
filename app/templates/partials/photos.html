@@ -1,0 +1,16 @@
+<section id="photos" class="section">
+    <div class="container">
+        <h2 class="section-title">Photos</h2>
+        <div class="photos-grid">
+            {% for image in photos %}
+            <div class="photo-item">
+                <img
+                    src="{{ url_for('static', filename='assets/photos/' + image) }}"
+                    alt=""
+                    loading="lazy"
+                >
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

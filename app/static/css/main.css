@@ -276,32 +276,28 @@ ul {
 }
 
 /* ============================================================
-   Slideshow
+   Photos
    ============================================================ */
-.slideshow {
+.photos-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.photo-item img {
   width: 100%;
-  height: clamp(280px, 45vh, 520px);
-  position: relative;
-  overflow: hidden;
-  border-top: 1px solid var(--color-border);
-}
-
-.slide {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-  transition: opacity 1s ease;
-}
-
-.slide.active {
-  opacity: 1;
-}
-
-.slide img {
-  width: 100%;
-  height: 100%;
+  aspect-ratio: 4 / 3;
   object-fit: cover;
+  border-radius: var(--radius);
   display: block;
+}
+
+@media (max-width: 768px) {
+  .photos-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .photos-grid { grid-template-columns: 1fr; }
 }
 
 /* ============================================================
