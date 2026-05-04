@@ -1,4 +1,3 @@
-import pytest
 from app.routes import get_photos
 
 

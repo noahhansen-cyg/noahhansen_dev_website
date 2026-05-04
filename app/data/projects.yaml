@@ -8,11 +8,11 @@
   url: "https://github.com/noahhansen-cyg/quiplash_but_fun_and_pictures-"
   status: "active"
 
-- name: "noahx1.dev"
+- name: "noahhansen.dev"
   description: >
     This website. A personal portfolio built with Flask and Jinja2, content-driven
     via YAML files so updates never require touching HTML or Python. Tested with
     pytest, linted with flake8, and deployed on Render with GitHub Actions CI.
   tech: ["Python", "Flask", "pytest", "Vanilla CSS"]
-  url: "https://github.com/noahhansen-cyg/noahx1_dev_website"
+  url: "https://github.com/noahhansen-cyg/noahhansen_dev_website"
   status: "active"

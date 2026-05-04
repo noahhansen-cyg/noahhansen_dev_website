@@ -40,12 +40,20 @@ def test_index_contains_email(client):
 
 def test_nav_links_use_absolute_anchors(client):
     resp = client.get("/")
-    for anchor in (b'href="/#work"', b'href="/#projects"', b'href="/#life"', b'href="/#photos"', b'href="/#contact"'):
+    anchors = (
+        b'href="/#work"', b'href="/#projects"', b'href="/#life"',
+        b'href="/#photos"', b'href="/#contact"',
+    )
+    for anchor in anchors:
         assert anchor in resp.data, f"{anchor} not found in nav"
 
 
 def test_resume_page_nav_links_work(client):
     resp = client.get("/resume")
     assert resp.status_code == 200
-    for anchor in (b'href="/#work"', b'href="/#projects"', b'href="/#life"', b'href="/#photos"', b'href="/#contact"'):
+    anchors = (
+        b'href="/#work"', b'href="/#projects"', b'href="/#life"',
+        b'href="/#photos"', b'href="/#contact"',
+    )
+    for anchor in anchors:
         assert anchor in resp.data, f"{anchor} missing from resume page nav"
