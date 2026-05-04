@@ -1,0 +1,11 @@
+<section class="slideshow">
+    {% for image in slideshow_images %}
+    <div class="slide{% if loop.first %} active{% endif %}">
+        <img
+            src="{{ url_for('static', filename='assets/slideshow/' + image) }}"
+            alt=""
+            {% if not loop.first %}loading="lazy"{% endif %}
+        >
+    </div>
+    {% endfor %}
+</section>
