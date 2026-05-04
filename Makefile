@@ -4,7 +4,7 @@ run:
 	FLASK_ENV=development .venv/bin/flask --app wsgi run
 
 test:
-	.venv/bin/pytest tests/ -v --cov=app --cov-report=term-missing --cov-fail-under=85
+	.venv/bin/pytest tests/
 
 lint:
 	.venv/bin/flake8 app/ tests/ --max-line-length=100

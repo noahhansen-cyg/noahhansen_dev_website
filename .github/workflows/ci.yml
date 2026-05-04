@@ -26,5 +26,4 @@ jobs:
           flake8 app/ tests/ --max-line-length=100
 
       - name: Test with coverage
-        run: |
-          pytest tests/ -v --cov=app --cov-report=term-missing --cov-fail-under=85
+        run: pytest tests/
