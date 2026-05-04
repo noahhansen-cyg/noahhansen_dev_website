@@ -1,6 +1,9 @@
 # Plan (local only)
 PLAN.md
 
+# Resume PDF (deploy separately, don't track in git)
+app/static/assets/resume.pdf
+
 # Python
 __pycache__/
 *.py[cod]
