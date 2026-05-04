@@ -505,9 +505,7 @@ ul {
    ============================================================ */
 .resume-viewer {
   padding-top: var(--nav-height);
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
+  padding-bottom: 3rem;
 }
 
 .resume-toolbar {
@@ -519,9 +517,14 @@ ul {
 }
 
 .resume-embed {
-  flex: 1;
+  display: block;
   width: 100%;
+  max-width: 860px;
+  /* US Letter aspect ratio — sizes embed to show the full page */
+  aspect-ratio: 8.5 / 11;
+  margin: 0 auto;
   border: none;
+  border-radius: var(--radius);
 }
 
 /* ============================================================
