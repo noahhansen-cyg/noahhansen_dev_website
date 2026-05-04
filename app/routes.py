@@ -1,4 +1,5 @@
 import os
+import threading
 from flask import Blueprint, render_template, current_app, jsonify, request
 from flask_mail import Message
 from app.extensions import mail
@@ -41,18 +42,23 @@ def contact():
         return jsonify({"error": "All fields are required."}), 400
 
     if current_app.config.get("MAIL_USERNAME"):
-        try:
-            msg = Message(
-                subject=f"Portfolio contact from {name}",
-                sender=current_app.config["MAIL_USERNAME"],
-                recipients=[current_app.config["MAIL_RECIPIENT"]],
-                reply_to=email,
-                body=f"Name: {name}\nEmail: {email}\n\n{message}",
-            )
-            mail.send(msg)
-        except Exception:
-            current_app.logger.exception("Failed to send contact email")
-            return jsonify({"error": "Failed to send message. Please try again later."}), 500
+        msg = Message(
+            subject=f"Portfolio contact from {name}",
+            sender=current_app.config["MAIL_USERNAME"],
+            recipients=[current_app.config["MAIL_RECIPIENT"]],
+            reply_to=email,
+            body=f"Name: {name}\nEmail: {email}\n\n{message}",
+        )
+        app = current_app._get_current_object()
+
+        def send_async():
+            with app.app_context():
+                try:
+                    mail.send(msg)
+                except Exception:
+                    app.logger.exception("Failed to send contact email")
+
+        threading.Thread(target=send_async, daemon=True).start()
     else:
         current_app.logger.info(
             "[DEV] Contact form: from=%s <%s> message=%s", name, email, message
