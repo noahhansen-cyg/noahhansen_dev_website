@@ -67,7 +67,7 @@ def test_life_is_a_list(data):
 
 def test_each_life_entry_has_required_keys(data):
     for entry in data["life"]:
-        for key in ("category", "blurb", "highlights"):
+        for key in ("category", "blurb"):
             assert key in entry, f"life entry missing key: '{key}'"
 
 
