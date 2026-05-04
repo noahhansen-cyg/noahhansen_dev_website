@@ -2,7 +2,7 @@ from unittest.mock import patch
 
 
 def test_contact_success(client):
-    with patch("app.routes.mail.send"):
+    with patch("app.routes.resend.Emails.send"):
         resp = client.post("/contact", data={
             "name": "Test User",
             "email": "test@example.com",

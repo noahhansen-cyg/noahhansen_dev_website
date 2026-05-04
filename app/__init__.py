@@ -1,8 +1,8 @@
 import os
+import resend
 from flask import Flask
 from config import config
 from app.data.loader import load_all
-from app.extensions import mail
 
 
 def create_app(config_name=None):
@@ -13,7 +13,7 @@ def create_app(config_name=None):
     app.config.from_object(config[config_name])
     app.config["SITE_DATA"] = load_all()
 
-    mail.init_app(app)
+    resend.api_key = app.config["RESEND_API_KEY"]
 
     from app.routes import main
     app.register_blueprint(main)
