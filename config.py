@@ -4,13 +4,9 @@ import os
 class Config:
     SECRET_KEY = os.environ.get("SECRET_KEY", "dev-secret-key-change-in-prod")
 
-    MAIL_SERVER = "smtp.gmail.com"
-    MAIL_PORT = 587
-    MAIL_USE_TLS = True
-    MAIL_USERNAME = os.environ.get("MAIL_USERNAME")
-    MAIL_PASSWORD = os.environ.get("MAIL_PASSWORD")
+    RESEND_API_KEY = os.environ.get("RESEND_API_KEY", "")
     MAIL_RECIPIENT = os.environ.get("MAIL_RECIPIENT", "noah.hansen1323@gmail.com")
-    MAIL_TIMEOUT = 10
+    MAIL_FROM = os.environ.get("MAIL_FROM", "contact@noahhansen.dev")
 
 
 class DevelopmentConfig(Config):
