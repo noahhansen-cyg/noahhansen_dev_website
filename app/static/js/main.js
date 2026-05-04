@@ -1,15 +1,30 @@
-const toggle = document.querySelector('.nav-toggle');
+// Mobile nav toggle
+const navToggle = document.querySelector('.nav-toggle');
 const navLinks = document.querySelector('.nav-links');
 
-toggle.addEventListener('click', () => {
-  const expanded = toggle.getAttribute('aria-expanded') === 'true';
-  toggle.setAttribute('aria-expanded', String(!expanded));
+navToggle.addEventListener('click', () => {
+  const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+  navToggle.setAttribute('aria-expanded', String(!expanded));
   navLinks.classList.toggle('open');
 });
 
 navLinks.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => {
     navLinks.classList.remove('open');
-    toggle.setAttribute('aria-expanded', 'false');
+    navToggle.setAttribute('aria-expanded', 'false');
   });
+});
+
+// Theme toggle
+const themeToggle = document.querySelector('.theme-toggle');
+
+themeToggle.addEventListener('click', () => {
+  const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+  if (isLight) {
+    document.documentElement.removeAttribute('data-theme');
+    localStorage.setItem('theme', 'dark');
+  } else {
+    document.documentElement.setAttribute('data-theme', 'light');
+    localStorage.setItem('theme', 'light');
+  }
 });
