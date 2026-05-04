@@ -26,11 +26,11 @@ def test_work_has_required_keys(data):
         assert key in work, f"work.yaml missing key: '{key}'"
 
 
-def test_work_skills_have_category_and_items(data):
+def test_work_skills_have_category_and_technologies(data):
     for skill in data["work"]["skills"]:
         assert "category" in skill
-        assert "items" in skill
-        assert isinstance(skill["items"], list)
+        assert "technologies" in skill
+        assert isinstance(skill["technologies"], list)
 
 
 def test_work_experience_has_required_keys(data):
@@ -74,7 +74,7 @@ def test_each_life_entry_has_required_keys(data):
 # --- links.yaml ---
 
 def test_links_has_required_keys(data):
-    for key in ("github", "linkedin", "email", "resume_filename"):
+    for key in ("name", "github", "linkedin", "email", "resume_filename"):
         assert key in data["links"], f"links.yaml missing key: '{key}'"
 
 

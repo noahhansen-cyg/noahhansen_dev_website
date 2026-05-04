@@ -5,13 +5,13 @@ summary: >
 
 skills:
   - category: "Languages"
-    items: ["Python", "Go", "TypeScript", "SQL"]
+    technologies: ["Python", "Go", "TypeScript", "SQL"]
   - category: "Frameworks & Libraries"
-    items: ["Flask", "FastAPI", "React", "SQLAlchemy"]
+    technologies: ["Flask", "FastAPI", "React", "SQLAlchemy"]
   - category: "Infrastructure"
-    items: ["AWS", "Docker", "Kubernetes", "Terraform"]
+    technologies: ["AWS", "Docker", "Kubernetes", "Terraform"]
   - category: "Tooling"
-    items: ["Git", "GitHub Actions", "Postgres", "Redis"]
+    technologies: ["Git", "GitHub Actions", "Postgres", "Redis"]
 
 experience:
   - company: "Company Name"

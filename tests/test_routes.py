@@ -1,3 +1,14 @@
+def test_index_returns_200(client):
+    resp = client.get("/")
+    assert resp.status_code == 200
+
+
+def test_resume_redirects(client):
+    resp = client.get("/resume")
+    assert resp.status_code == 302
+    assert "resume.pdf" in resp.headers["Location"]
+
+
 def test_health_returns_200(client):
     resp = client.get("/health")
     assert resp.status_code == 200
