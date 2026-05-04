@@ -402,11 +402,15 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 0.75rem;
-  transition: box-shadow 0.15s;
+  position: relative;
+  cursor: pointer;
+  transition: box-shadow 0.15s, border-color 0.15s, background-color 0.15s;
 }
 
 .project-card:hover {
   box-shadow: var(--shadow);
+  border-color: var(--color-accent);
+  background-color: var(--color-surface-alt);
 }
 
 .project-header {
@@ -425,7 +429,15 @@ ul {
   color: var(--color-text);
 }
 
-.project-card h3 a:hover {
+/* Stretched link — expands the <a> to cover the entire card */
+.project-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: var(--radius);
+}
+
+.project-card:hover h3 a {
   color: var(--color-accent);
   text-decoration: none;
 }
