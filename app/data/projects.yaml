@@ -1,22 +1,18 @@
-- name: "This Website"
+- name: "Photo Quiplash"
   description: >
-    Personal portfolio built with Flask, Jinja2, and vanilla CSS.
-    Content-driven via YAML, tested with pytest, deployed on Render.
-  tech: ["Python", "Flask", "pytest", "YAML"]
-  url: "https://github.com/noahx1/noahx1_dev_website"
+    A party game like Quiplash, but with photos. A prompt appears — players submit
+    photos from their phones, everyone votes, chaos ensues. No app install needed;
+    players join via browser. Packages as a double-clickable desktop installer
+    compatible with Steam.
+  tech: ["Python", "Flask", "React", "Socket.IO", "Electron", "PyInstaller"]
+  url: "https://github.com/noahhansen-cyg/quiplash_but_fun_and_pictures-"
   status: "active"
 
-- name: "Project Two"
+- name: "noahx1.dev"
   description: >
-    Short description of what this project does and why you built it.
-    Focus on the problem it solves, not just the tech stack.
-  tech: ["Python", "Redis", "Docker"]
-  url: "https://github.com/noahx1/project-two"
+    This website. A personal portfolio built with Flask and Jinja2, content-driven
+    via YAML files so updates never require touching HTML or Python. Tested with
+    pytest, linted with flake8, and deployed on Render with GitHub Actions CI.
+  tech: ["Python", "Flask", "pytest", "Vanilla CSS"]
+  url: "https://github.com/noahhansen-cyg/noahx1_dev_website"
   status: "active"
-
-- name: "Project Three"
-  description: >
-    Another project. What motivated you to build it? What did you learn?
-  tech: ["Go", "PostgreSQL"]
-  url: "https://github.com/noahx1/project-three"
-  status: "archived"
