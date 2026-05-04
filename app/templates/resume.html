@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="resume-viewer">
+    <div class="resume-toolbar container">
+        <a href="/" class="btn btn-outline">&larr; Back</a>
+        <a href="{{ url_for('static', filename='assets/resume.pdf') }}" download class="btn">Download</a>
+    </div>
+    <embed
+        src="{{ url_for('static', filename='assets/resume.pdf') }}"
+        type="application/pdf"
+        class="resume-embed"
+    />
+</div>
+{% endblock %}

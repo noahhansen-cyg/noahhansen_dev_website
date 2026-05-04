@@ -1,4 +1,4 @@
-from flask import Blueprint, render_template, redirect, url_for, current_app, jsonify
+from flask import Blueprint, render_template, current_app, jsonify
 
 main = Blueprint("main", __name__)
 
@@ -11,7 +11,8 @@ def index():
 
 @main.route("/resume")
 def resume():
-    return redirect(url_for("static", filename="assets/resume.pdf"))
+    data = current_app.config["SITE_DATA"]
+    return render_template("resume.html", **data)
 
 
 @main.route("/health")
