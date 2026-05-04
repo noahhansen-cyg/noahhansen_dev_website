@@ -739,7 +739,7 @@ ul {
    Responsive — Mobile
    ============================================================ */
 @media (max-width: 480px) {
-  .skills        { grid-template-columns: 1fr; }
+  .skills        { grid-template-columns: repeat(2, 1fr); }
   .projects-grid { grid-template-columns: 1fr; }
 
   .hero-actions  { flex-direction: column; }
