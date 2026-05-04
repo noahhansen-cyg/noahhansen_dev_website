@@ -15,6 +15,41 @@ navLinks.querySelectorAll('a').forEach(link => {
   });
 });
 
+// Contact form
+const contactForm = document.querySelector('.contact-form');
+if (contactForm) {
+  const statusEl = contactForm.querySelector('.form-status');
+  const submitBtn = contactForm.querySelector('button[type="submit"]');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    submitBtn.disabled = true;
+    statusEl.textContent = '';
+    statusEl.className = 'form-status';
+
+    try {
+      const resp = await fetch('/contact', {
+        method: 'POST',
+        body: new FormData(contactForm),
+      });
+      const data = await resp.json();
+      if (resp.ok && data.success) {
+        statusEl.textContent = 'Message sent! I\'ll get back to you soon.';
+        statusEl.classList.add('form-status--success');
+        contactForm.reset();
+      } else {
+        statusEl.textContent = data.error || 'Something went wrong. Please try again.';
+        statusEl.classList.add('form-status--error');
+      }
+    } catch {
+      statusEl.textContent = 'Network error. Please try again.';
+      statusEl.classList.add('form-status--error');
+    } finally {
+      submitBtn.disabled = false;
+    }
+  });
+}
+
 // Theme toggle
 const themeToggle = document.querySelector('.theme-toggle');
 

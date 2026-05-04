@@ -542,18 +542,75 @@ ul {
 }
 
 /* ============================================================
-   Links Section
+   Contact
    ============================================================ */
-.links-list {
-  display: flex;
-  flex-direction: column;
-  gap: 0.85rem;
+.contact-intro {
+  color: var(--color-text-muted);
+  margin-bottom: 2rem;
+  max-width: 560px;
 }
 
-.links-list a {
-  font-size: 1rem;
-  font-weight: 500;
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  max-width: 560px;
 }
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--color-text-muted);
+}
+
+.form-group input,
+.form-group textarea {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius);
+  color: var(--color-text);
+  font-family: var(--font-sans);
+  font-size: 0.95rem;
+  padding: 0.6rem 0.85rem;
+  transition: border-color 0.15s;
+  width: 100%;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-text-muted);
+  opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+.form-group textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.form-status {
+  font-size: 0.875rem;
+}
+
+.form-status--success { color: #22c55e; }
+.form-status--error   { color: #ef4444; }
 
 /* ============================================================
    Resume Viewer
@@ -602,6 +659,17 @@ ul {
 
 .footer a:hover {
   color: var(--color-text);
+}
+
+.footer-social {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.footer-social a {
+  font-size: 0.875rem;
 }
 
 /* ============================================================
