@@ -34,4 +34,13 @@
             {% endfor %}
         </div>
     </div>
+
+        {% if work.education %}
+        <div class="education">
+            <h3 class="education-label">Education</h3>
+            <p class="education-degree">{{ work.education.degree }}</p>
+            <p class="education-school">{{ work.education.school }}, {{ work.education.location }} &mdash; {{ work.education.graduated }}</p>
+        </div>
+        {% endif %}
+    </div>
 </section>

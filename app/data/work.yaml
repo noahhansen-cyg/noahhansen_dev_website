@@ -1,29 +1,57 @@
-title: "Software Engineer"
+title: "Senior Software Engineer"
 summary: >
-  I build reliable, scalable backend systems and love working across the full stack.
-  I care about clean interfaces, good tests, and software that actually ships.
+  Software engineer with 6 years of experience designing and developing full-stack applications.
+  Proven track record delivering scalable solutions across Ruby on Rails, Python, JavaScript,
+  Java, AWS, and Azure. Leveraging Gen AI to accelerate productivity and strong collaborative
+  skills with experience leading development initiatives across government, fintech, and
+  cybersecurity.
 
 skills:
   - category: "Languages"
-    technologies: ["Python", "Go", "TypeScript", "SQL"]
-  - category: "Frameworks & Libraries"
-    technologies: ["Flask", "FastAPI", "React", "SQLAlchemy"]
-  - category: "Infrastructure"
-    technologies: ["AWS", "Docker", "Kubernetes", "Terraform"]
-  - category: "Tooling"
-    technologies: ["Git", "GitHub Actions", "Postgres", "Redis"]
+    technologies: ["Python", "Ruby", "Java", "JavaScript", "SQL", "Bash", "C"]
+  - category: "Frameworks"
+    technologies: ["Ruby on Rails", "Spring Boot", "React", "RSpec", "JUNIT"]
+  - category: "Cloud & Infrastructure"
+    technologies: ["AWS", "Azure", "Kubernetes", "Unix"]
+  - category: "Data & Tooling"
+    technologies: ["PostgreSQL", "PrestoDB/Athena", "Oracle", "LDAP", "Git", "RESTful APIs"]
 
 experience:
-  - company: "Company Name"
-    role: "Software Engineer"
-    dates: "2023 – Present"
+  - company: "TAKE2"
+    role: "Senior Software Developer"
+    dates: "March 2024 – Present"
     bullets:
-      - "Built and maintained X service that handles Y requests per day."
-      - "Led migration from monolith to microservices, reducing deploy time by Z%."
-      - "Improved test coverage from 40% to 85% across core payment flows."
-  - company: "Previous Company"
-    role: "Junior Software Engineer"
-    dates: "2021 – 2023"
+      - "Worked on the Benefits Integrated Delivery contract with Booz-Allen Hamilton for the Department of Veterans Affairs."
+      - "Co-led development of a docket lock holding system providing live frontend updates and preventing scheduling conflicts, contributing to a ~25% increase in stakeholder efficiency."
+      - "Helped lead development and delivery of the Modernized Hearing Scheduler — multi-page aggregate views enabling precise decision making and scheduling for veteran benefit hearings."
+      - "Stack: Ruby on Rails, React, PostgreSQL, AWS, Python."
+
+  - company: "BillGO"
+    role: "Software Developer II"
+    dates: "May 2023 – February 2024"
     bullets:
-      - "Developed internal tooling that saved the team N hours per week."
-      - "Contributed to open-source library used by 500+ projects on GitHub."
+      - "Maintained the BillGO data warehouse and led conversion of banks from Fiserv bill pay to BillGO."
+      - "Led development and process design of the presales matching pipeline — ingesting large biller datasets and converting them into business analytics presented to potential consumers."
+      - "Stack: Python, PrestoDB/Athena, RESTful APIs, AWS."
+
+  - company: "Red Canary"
+    role: "Software Developer I"
+    dates: "October 2021 – February 2023"
+    bullets:
+      - "Developed SaaS and cloud integrations for Red Canary's Managed Detection and Response product."
+      - "Built large-scale data processing pipelines handling billions of telemetry points per day via REST APIs, Ruby, and Unix."
+      - "Stack: Ruby on Rails, Kubernetes, Azure, AWS, Microsoft Defender for Cloud, Lacework, Google Workspace."
+
+  - company: "Leidos"
+    role: "Software Developer"
+    dates: "June 2018 – October 2021"
+    bullets:
+      - "Built backend developer tooling for the internal development team in Python and Java."
+      - "Supported the Consumer Integration Team with access control integrations for enterprise customers."
+      - "Stack: Oracle Access Manager, Oracle Directory Services Manager, LDAP, Python, Java."
+
+education:
+  degree: "Bachelor of Science, Applied Computer Science"
+  school: "George Mason University"
+  location: "Fairfax, VA"
+  graduated: "May 2020"

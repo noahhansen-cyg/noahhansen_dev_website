@@ -162,6 +162,12 @@ ul {
   margin-bottom: 1.5rem;
 }
 
+.hero-location {
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+}
+
 .hero-summary {
   font-size: 1.1rem;
   color: var(--color-text-muted);
@@ -468,6 +474,35 @@ ul {
 
 .footer a:hover {
   color: var(--color-text);
+}
+
+/* ============================================================
+   Education
+   ============================================================ */
+.education {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--color-border);
+}
+
+.education-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-text-muted);
+  margin-bottom: 0.5rem;
+}
+
+.education-degree {
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 0.2rem;
+}
+
+.education-school {
+  font-size: 0.875rem;
+  color: var(--color-text-muted);
 }
 
 /* ============================================================
