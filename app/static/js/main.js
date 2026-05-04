@@ -19,6 +19,8 @@ navLinks.querySelectorAll('a').forEach(link => {
 const themeToggle = document.querySelector('.theme-toggle');
 
 themeToggle.addEventListener('click', () => {
+  document.documentElement.classList.add('theme-transitioning');
+
   const isLight = document.documentElement.getAttribute('data-theme') === 'light';
   if (isLight) {
     document.documentElement.removeAttribute('data-theme');
@@ -27,4 +29,6 @@ themeToggle.addEventListener('click', () => {
     document.documentElement.setAttribute('data-theme', 'light');
     localStorage.setItem('theme', 'light');
   }
+
+  setTimeout(() => document.documentElement.classList.remove('theme-transitioning'), 300);
 });
