@@ -41,14 +41,18 @@ def contact():
         return jsonify({"error": "All fields are required."}), 400
 
     if current_app.config.get("MAIL_USERNAME"):
-        msg = Message(
-            subject=f"Portfolio contact from {name}",
-            sender=current_app.config["MAIL_USERNAME"],
-            recipients=[current_app.config["MAIL_RECIPIENT"]],
-            reply_to=email,
-            body=f"Name: {name}\nEmail: {email}\n\n{message}",
-        )
-        mail.send(msg)
+        try:
+            msg = Message(
+                subject=f"Portfolio contact from {name}",
+                sender=current_app.config["MAIL_USERNAME"],
+                recipients=[current_app.config["MAIL_RECIPIENT"]],
+                reply_to=email,
+                body=f"Name: {name}\nEmail: {email}\n\n{message}",
+            )
+            mail.send(msg)
+        except Exception:
+            current_app.logger.exception("Failed to send contact email")
+            return jsonify({"error": "Failed to send message. Please try again later."}), 500
     else:
         current_app.logger.info(
             "[DEV] Contact form: from=%s <%s> message=%s", name, email, message
