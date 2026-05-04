@@ -4,7 +4,10 @@
 
         <div class="life-grid">
             {% for entry in life %}
-            <div class="life-card">
+            <div class="life-card{% if entry.url %} life-card--linked{% endif %}">
+                {% if entry.url %}
+                <a href="{{ entry.url }}" class="stretched-link" target="_blank" rel="noopener" aria-label="{{ entry.category }}"></a>
+                {% endif %}
                 <h3>{{ entry.category }}</h3>
                 <p>{{ entry.blurb }}</p>
                 {% if entry.highlights %}
