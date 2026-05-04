@@ -1,0 +1,22 @@
+- name: "This Website"
+  description: >
+    Personal portfolio built with Flask, Jinja2, and vanilla CSS.
+    Content-driven via YAML, tested with pytest, deployed on Render.
+  tech: ["Python", "Flask", "pytest", "YAML"]
+  url: "https://github.com/noahx1/noahx1_dev_website"
+  status: "active"
+
+- name: "Project Two"
+  description: >
+    Short description of what this project does and why you built it.
+    Focus on the problem it solves, not just the tech stack.
+  tech: ["Python", "Redis", "Docker"]
+  url: "https://github.com/noahx1/project-two"
+  status: "active"
+
+- name: "Project Three"
+  description: >
+    Another project. What motivated you to build it? What did you learn?
+  tech: ["Go", "PostgreSQL"]
+  url: "https://github.com/noahx1/project-three"
+  status: "archived"
