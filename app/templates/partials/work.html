@@ -1,35 +1,37 @@
 <section id="work" class="section">
-    <h2 class="section-title">Work</h2>
+    <div class="container">
+        <h2 class="section-title">Work</h2>
 
-    <div class="skills">
-        {% for group in work.skills %}
-        <div class="skill-group">
-            <h3>{{ group.category }}</h3>
-            <ul class="skill-list">
-                {% for item in group.technologies %}
-                <li>{{ item }}</li>
-                {% endfor %}
-            </ul>
-        </div>
-        {% endfor %}
-    </div>
-
-    <div class="experience">
-        {% for job in work.experience %}
-        <div class="job">
-            <div class="job-header">
-                <div>
-                    <h3 class="job-role">{{ job.role }}</h3>
-                    <span class="job-company">{{ job.company }}</span>
-                </div>
-                <span class="job-dates">{{ job.dates }}</span>
+        <div class="skills">
+            {% for group in work.skills %}
+            <div class="skill-group">
+                <h3>{{ group.category }}</h3>
+                <ul class="skill-list">
+                    {% for item in group.technologies %}
+                    <li>{{ item }}</li>
+                    {% endfor %}
+                </ul>
             </div>
-            <ul class="job-bullets">
-                {% for bullet in job.bullets %}
-                <li>{{ bullet }}</li>
-                {% endfor %}
-            </ul>
+            {% endfor %}
         </div>
-        {% endfor %}
+
+        <div class="experience">
+            {% for job in work.experience %}
+            <div class="job">
+                <div class="job-header">
+                    <div>
+                        <h3 class="job-role">{{ job.role }}</h3>
+                        <span class="job-company">{{ job.company }}</span>
+                    </div>
+                    <span class="job-dates">{{ job.dates }}</span>
+                </div>
+                <ul class="job-bullets">
+                    {% for bullet in job.bullets %}
+                    <li>{{ bullet }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endfor %}
+        </div>
     </div>
 </section>
