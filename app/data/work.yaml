@@ -44,11 +44,27 @@ experience:
 
   - company: "Leidos"
     role: "Software Developer"
-    dates: "June 2018 – October 2021"
+    dates: "August 2019 – October 2021"
     bullets:
       - "Built backend developer tooling for the internal development team in Python and Java."
       - "Supported the Consumer Integration Team with access control integrations for enterprise customers."
       - "Stack: Oracle Access Manager, Oracle Directory Services Manager, LDAP, Python, Java."
+
+  - company: "Leidos - GEOAxIS Program"
+    role: "Software Development Intern"
+    dates: "June 2018 – August 2019"
+    bullets:
+      - "Created elements of access control for the National Geospatial Intelligence Agency (NGA)."
+      - "Implemented Ansible playbooks to keep multiple development environments updated."
+      - "Contributed to a team responsible for pushing specific component updates into the development environment."
+
+  - company: "Sonatype"
+    role: "Software Intern"
+    dates: "May 2017 – August 2017"
+    bullets:
+      - "Analyzed open source software licenses used by Sonatype."
+      - "Established and maintained a spreadsheet of information about the licenses."
+      - "Created automation script to extract license information from web pages."
 
 education:
   degree: "Bachelor of Science, Applied Computer Science"
