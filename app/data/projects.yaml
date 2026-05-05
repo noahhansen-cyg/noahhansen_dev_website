@@ -1,3 +1,14 @@
+- name: "Fadr Stem Separation Benchmark"
+  description: >
+    Benchmarks Fadr's AI stem separator against the MUSDB18-HQ ground-truth dataset
+    using BSS Eval metrics (SDR, SIR, SAR) via mir_eval. Runs a full pipeline —
+    upload mixtures to Fadr via S3, download separated stems, evaluate in parallel
+    across 46 test tracks, and report per-stem medians. Vocals hit 9.91 dB SDR,
+    drums 11.15 dB, bass 11.72 dB.
+  tech: ["Python", "mir_eval", "AWS S3", "Fadr API", "MUSDB18-HQ"]
+  url: "https://github.com/noahhansen-cyg/fadr_mir_eval_benchmark"
+  status: "active"
+
 - name: "Photo Quiplash"
   description: >
     A party game like Quiplash, but with photos. A prompt appears — players submit
