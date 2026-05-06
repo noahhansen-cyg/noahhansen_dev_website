@@ -1,4 +1,4 @@
-# noahx1.dev
+# noahhansen.dev
 
 Personal portfolio website for Noah Hansen — software engineer, drummer, and outdoor enthusiast.
 
