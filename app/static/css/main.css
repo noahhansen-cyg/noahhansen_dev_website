@@ -3,22 +3,23 @@
    ============================================================ */
 :root {
   /* Dark mode (default) */
-  --color-bg: #0f172a;
-  --color-surface: #1e293b;
-  --color-surface-alt: #334155;
-  --color-border: #334155;
-  --color-text: #f1f5f9;
-  --color-text-muted: #94a3b8;
-  --color-accent: #3b82f6;
-  --color-accent-hover: #60a5fa;
-  --color-accent-light: #1e3a5f;
-  --color-nav-bg: rgba(15, 23, 42, 0.92);
+  --color-bg: #0d1117;
+  --color-surface: #161b22;
+  --color-surface-alt: #21262d;
+  --color-border: #30363d;
+  --color-text: #e6edf3;
+  --color-text-muted: #8b949e;
+  --color-accent: #3fb950;
+  --color-accent-hover: #56d364;
+  --color-accent-light: #0a2718;
+  --color-btn-text: #0a2718;
+  --color-nav-bg: rgba(13, 17, 23, 0.95);
 
-  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --font-sans: "Menlo", "Monaco", "Consolas", "Liberation Mono", "Courier New", monospace;
 
-  --radius: 0.5rem;
-  --radius-sm: 0.25rem;
-  --shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+  --radius: 0.2rem;
+  --radius-sm: 0;
+  --shadow: 0 0 0 1px var(--color-border), 0 4px 16px rgba(0, 0, 0, 0.5);
 
   --container-width: 1000px;
   --nav-height: 68px;
@@ -27,16 +28,17 @@
 
 [data-theme="light"] {
   --color-bg: #ffffff;
-  --color-surface: #f8fafc;
-  --color-surface-alt: #f1f5f9;
-  --color-border: #e2e8f0;
-  --color-text: #0f172a;
-  --color-text-muted: #64748b;
-  --color-accent: #2563eb;
-  --color-accent-hover: #1d4ed8;
-  --color-accent-light: #dbeafe;
-  --color-nav-bg: rgba(255, 255, 255, 0.92);
-  --shadow: 0 1px 3px rgba(0, 0, 0, 0.06), 0 4px 12px rgba(0, 0, 0, 0.04);
+  --color-surface: #f6f8fa;
+  --color-surface-alt: #eaeef2;
+  --color-border: #d0d7de;
+  --color-text: #1f2328;
+  --color-text-muted: #636c76;
+  --color-accent: #1a7f37;
+  --color-accent-hover: #116329;
+  --color-accent-light: #dafbe1;
+  --color-btn-text: #ffffff;
+  --color-nav-bg: rgba(255, 255, 255, 0.95);
+  --shadow: 0 0 0 1px var(--color-border), 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 /* Applied only during theme toggle — removed immediately after transition */
@@ -119,7 +121,13 @@ ul {
   font-weight: 700;
   font-size: 1.05rem;
   color: var(--color-text);
-  letter-spacing: -0.01em;
+  letter-spacing: 0;
+}
+
+.nav-name::before {
+  content: "~/";
+  color: var(--color-accent);
+  font-weight: 400;
 }
 
 .nav-name:hover {
@@ -220,13 +228,24 @@ ul {
 .hero .container {
   max-width: 1280px;
   padding-top: 3rem;
-  padding-bottom: 3rem;
+  padding-bottom: 6rem;
+}
+
+.hero-prompt {
+  font-size: 0.95rem;
+  color: var(--color-text-muted);
+  margin-bottom: 1rem;
+}
+
+.hero-prompt::before {
+  content: "$ ";
+  color: var(--color-accent);
 }
 
 .hero h1 {
   font-size: clamp(3rem, 7vw, 5.5rem);
   font-weight: 800;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.01em;
   line-height: 1.1;
   margin-bottom: 0.5rem;
 }
@@ -265,29 +284,31 @@ ul {
   display: inline-block;
   padding: 0.75rem 1.6rem;
   background: var(--color-accent);
-  color: #ffffff;
+  color: var(--color-btn-text);
+  border: 1px solid var(--color-accent);
   border-radius: var(--radius);
   font-size: 1rem;
-  font-weight: 500;
-  transition: background 0.15s;
+  font-weight: 600;
+  transition: background 0.15s, border-color 0.15s;
 }
 
 .btn:hover {
   background: var(--color-accent-hover);
-  color: #ffffff;
+  border-color: var(--color-accent-hover);
+  color: var(--color-btn-text);
   text-decoration: none;
 }
 
 .btn-outline {
   background: transparent;
-  color: var(--color-text);
-  border: 1.5px solid var(--color-border);
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
 }
 
 .btn-outline:hover {
-  background: var(--color-surface);
-  color: var(--color-text);
-  border-color: var(--color-text-muted);
+  background: transparent;
+  color: var(--color-accent);
+  border-color: var(--color-accent);
 }
 
 /* ============================================================
@@ -301,8 +322,14 @@ ul {
 .section-title {
   font-size: 2rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: 0;
   margin-bottom: 2.5rem;
+}
+
+.section-title::before {
+  content: "==> ";
+  color: var(--color-accent);
+  font-weight: 400;
 }
 
 /* ============================================================
@@ -487,10 +514,11 @@ ul {
 
 .tag {
   font-size: 0.75rem;
-  font-weight: 500;
-  padding: 0.2rem 0.6rem;
-  background: var(--color-accent-light);
-  color: var(--color-accent);
+  font-weight: 400;
+  padding: 0.15rem 0.5rem;
+  background: transparent;
+  color: var(--color-text-muted);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-sm);
 }
 
