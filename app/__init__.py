@@ -1,6 +1,6 @@
 import os
 import resend
-from flask import Flask
+from flask import Flask, render_template
 from config import config
 from app.data.loader import load_all
 
@@ -17,5 +17,10 @@ def create_app(config_name=None):
 
     from app.routes import main
     app.register_blueprint(main)
+
+    @app.errorhandler(404)
+    def not_found(e):
+        data = app.config["SITE_DATA"]
+        return render_template("404.html", **data), 404
 
     return app

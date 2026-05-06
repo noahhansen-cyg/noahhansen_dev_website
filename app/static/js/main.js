@@ -50,6 +50,15 @@ if (contactForm) {
   });
 }
 
+// Scroll hint fade
+const scrollHint = document.querySelector('.scroll-hint');
+if (scrollHint) {
+  window.addEventListener('scroll', () => {
+    const fade = Math.max(0, 1 - window.scrollY / 150);
+    scrollHint.style.opacity = fade;
+  }, { passive: true });
+}
+
 // Theme toggle
 const themeToggle = document.querySelector('.theme-toggle');
 
