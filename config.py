@@ -8,6 +8,9 @@ class Config:
     MAIL_RECIPIENT = os.environ.get("MAIL_RECIPIENT", "noah.hansen1323@gmail.com")
     MAIL_FROM = os.environ.get("MAIL_FROM", "contact@noahhansen.dev")
 
+    # Cache static files for 1 year (browsers won't re-fetch)
+    SEND_FILE_MAX_AGE_DEFAULT = 31536000
+
 
 class DevelopmentConfig(Config):
     DEBUG = True
